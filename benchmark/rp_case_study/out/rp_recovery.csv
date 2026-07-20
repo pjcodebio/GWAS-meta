@@ -1,0 +1,2 @@
+locus,chr,expected_pos_hg38,recovered,n_sig_in_window,lead_variant,lead_p_fixed,lead_beta_fixed,lead_i_squared
+EYS,6,64990459,True,15,chr6:64990459:A:G,1.1730392925167945e-13,1.3733277389867566,0.0

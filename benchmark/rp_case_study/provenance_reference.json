@@ -1,0 +1,439 @@
+{
+  "header": {
+    "tool": "gwas-meta",
+    "tool_version": "0.1.0",
+    "git_commit": null,
+    "session_start_utc": "2026-06-07T13:59:00.022849+00:00",
+    "gwas_catalog_url": "https://www.ebi.ac.uk/gwas/rest/api",
+    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+    "python_version": "3.14.3",
+    "machine": "arm64"
+  },
+  "events": [
+    {
+      "ts_utc": "2026-06-07T13:59:57.868095+00:00",
+      "kind": "research_question",
+      "payload": {
+        "question": "What common genetic variants are associated with retinitis pigmentosa?"
+      }
+    },
+    {
+      "ts_utc": "2026-06-07T14:00:03.572816+00:00",
+      "kind": "search_terms_proposed",
+      "payload": {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-20250514",
+        "criteria": {
+          "trait_description": "Retinitis pigmentosa - a group of inherited eye disorders that cause progressive vision loss due to photoreceptor degeneration",
+          "efo_terms": [
+            "retinitis pigmentosa",
+            "retinal degeneration",
+            "inherited retinal dystrophy",
+            "rod-cone dystrophy",
+            "progressive retinal atrophy",
+            "Leber congenital amaurosis",
+            "retinal dystrophy",
+            "photoreceptor degeneration"
+          ],
+          "inclusion_criteria": [
+            "genome-wide significance threshold of 5e-8",
+            "common variants with MAF > 1%",
+            "case-control or cohort study design",
+            "clinically diagnosed retinitis pigmentosa",
+            "genome-wide association studies"
+          ],
+          "exclusion_criteria": [
+            "candidate gene studies only",
+            "rare variants or copy number variants only",
+            "family-based linkage studies",
+            "exome sequencing studies without GWAS component",
+            "syndromic forms of retinal degeneration",
+            "drug-induced retinal toxicity studies"
+          ],
+          "ancestry_preference": null,
+          "min_sample_size": null
+        }
+      },
+      "compute_seconds": 5.1016
+    },
+    {
+      "ts_utc": "2026-06-07T14:02:00.065620+00:00",
+      "kind": "search_terms_final",
+      "payload": {
+        "criteria": {
+          "trait_description": "Retinitis pigmentosa - a group of inherited eye disorders that cause progressive vision loss due to photoreceptor degeneration",
+          "efo_terms": [
+            "retinitis pigmentosa"
+          ],
+          "inclusion_criteria": [
+            "genome-wide significance threshold of 5e-8",
+            "common variants with MAF > 1%",
+            "case-control or cohort study design",
+            "clinically diagnosed retinitis pigmentosa",
+            "genome-wide association studies"
+          ],
+          "exclusion_criteria": [
+            "candidate gene studies only",
+            "rare variants or copy number variants only",
+            "family-based linkage studies",
+            "exome sequencing studies without GWAS component",
+            "syndromic forms of retinal degeneration",
+            "drug-induced retinal toxicity studies"
+          ],
+          "ancestry_preference": null,
+          "min_sample_size": null
+        }
+      }
+    },
+    {
+      "ts_utc": "2026-06-07T14:02:03.391378+00:00",
+      "kind": "catalog_search_results",
+      "payload": {
+        "n_traits": 1,
+        "n_studies": 5,
+        "studies": [
+          {
+            "study_id": "GCST90011894",
+            "title": "A hypomorphic variant in EYS detected by genome-wide association study contributes toward retinitis pigmentosa.",
+            "traits": "",
+            "sample_size": "640 Japanese ancestry cases, 890 Japanese ancestry controls",
+            "ancestry": "640 Japanese ancestry cases, 890 Japanese ancestry controls",
+            "journal": "Commun Biol",
+            "date": "2021-01-29",
+            "pubmed_id": "33514863"
+          },
+          {
+            "study_id": "GCST90011893",
+            "title": "A hypomorphic variant in EYS detected by genome-wide association study contributes toward retinitis pigmentosa.",
+            "traits": "",
+            "sample_size": "208 Japanese ancestry cases, 287 Japanese ancestry controls",
+            "ancestry": "208 Japanese ancestry cases, 287 Japanese ancestry controls",
+            "journal": "Commun Biol",
+            "date": "2021-01-29",
+            "pubmed_id": "33514863"
+          },
+          {
+            "study_id": "GCST90011892",
+            "title": "A hypomorphic variant in EYS detected by genome-wide association study contributes toward retinitis pigmentosa.",
+            "traits": "",
+            "sample_size": "432 Japanese ancestry cases, 603 Japanese ancestry controls",
+            "ancestry": "432 Japanese ancestry cases, 603 Japanese ancestry controls",
+            "journal": "Commun Biol",
+            "date": "2021-01-29",
+            "pubmed_id": "33514863"
+          },
+          {
+            "study_id": "GCST90018692",
+            "title": "A cross-population atlas of genetic associations for 220 human phenotypes.",
+            "traits": "",
+            "sample_size": "155 East Asian ancestry cases, 168,903 East Asian ancestry controls",
+            "ancestry": "155 East Asian ancestry cases, 168,903 East Asian ancestry controls",
+            "journal": "Nat Genet",
+            "date": "2021-09-30",
+            "pubmed_id": "34594039"
+          },
+          {
+            "study_id": "GCST90018912",
+            "title": "A cross-population atlas of genetic associations for 220 human phenotypes.",
+            "traits": "",
+            "sample_size": "121 European ancestry cases, 126,333 European ancestry controls, 155 East Asian ancestry cases, 168,903 East Asian ancestry controls",
+            "ancestry": "121 European ancestry cases, 126,333 European ancestry controls, 155 East Asian ancestry cases, 168,903 East Asian ancestry controls",
+            "journal": "Nat Genet",
+            "date": "2021-09-30",
+            "pubmed_id": "34594039"
+          }
+        ]
+      },
+      "compute_seconds": 2.6954
+    },
+    {
+      "ts_utc": "2026-06-07T14:10:20.272425+00:00",
+      "kind": "studies_selected",
+      "payload": {
+        "included": [
+          "GCST90011892",
+          "GCST90011893"
+        ],
+        "excluded": [
+          "GCST90011894",
+          "GCST90018692",
+          "GCST90018912"
+        ]
+      }
+    },
+    {
+      "ts_utc": "2026-06-07T14:10:56.312008+00:00",
+      "kind": "download_complete",
+      "payload": {
+        "n_requested": 2,
+        "n_downloaded": 2,
+        "n_errors": 0,
+        "downloaded_study_ids": [
+          "GCST90011892",
+          "GCST90011893"
+        ],
+        "failed_study_ids": []
+      },
+      "compute_seconds": 35.8489
+    },
+    {
+      "ts_utc": "2026-06-07T14:11:12.958567+00:00",
+      "kind": "qc_lambda_gc",
+      "payload": {
+        "lambda_gc": {
+          "GCST90011893": 1.0344937194730668,
+          "GCST90011892": 1.0550163764581446
+        },
+        "studies_evaluated": [
+          "GCST90011893",
+          "GCST90011892"
+        ]
+      },
+      "compute_seconds": 16.6439
+    },
+    {
+      "ts_utc": "2026-06-07T14:11:16.522098+00:00",
+      "kind": "qc_exclusions",
+      "payload": {
+        "excluded": [],
+        "remaining": [
+          "GCST90011892",
+          "GCST90011893"
+        ]
+      }
+    },
+    {
+      "ts_utc": "2026-06-07T14:11:16.632346+00:00",
+      "kind": "meta_settings",
+      "payload": {
+        "min_study_count": 2,
+        "valid_hm_codes": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "q_threshold": 1e-06,
+        "sig_threshold": 5e-08,
+        "n_studies_input": 2,
+        "study_ids": [
+          "GCST90011892",
+          "GCST90011893"
+        ]
+      }
+    },
+    {
+      "ts_utc": "2026-06-07T14:11:49.764864+00:00",
+      "kind": "chunking_complete",
+      "payload": {
+        "n_studies": 2,
+        "n_chromosomes": 22,
+        "chromosomes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      },
+      "compute_seconds": 33.0775
+    },
+    {
+      "ts_utc": "2026-06-07T14:13:54.266996+00:00",
+      "kind": "alignment_meta_complete",
+      "payload": {
+        "n_chroms_processed": 22,
+        "n_chroms_skipped": 0,
+        "total_aligned_variants": 6867143,
+        "total_meta_variants": 6867143,
+        "per_chrom": [
+          {
+            "chrom": "1",
+            "n_studies": 2,
+            "aligned_variants": 538437,
+            "meta_variants": 538437,
+            "skipped": false
+          },
+          {
+            "chrom": "2",
+            "n_studies": 2,
+            "aligned_variants": 576861,
+            "meta_variants": 576861,
+            "skipped": false
+          },
+          {
+            "chrom": "3",
+            "n_studies": 2,
+            "aligned_variants": 507034,
+            "meta_variants": 507034,
+            "skipped": false
+          },
+          {
+            "chrom": "4",
+            "n_studies": 2,
+            "aligned_variants": 505673,
+            "meta_variants": 505673,
+            "skipped": false
+          },
+          {
+            "chrom": "5",
+            "n_studies": 2,
+            "aligned_variants": 442786,
+            "meta_variants": 442786,
+            "skipped": false
+          },
+          {
+            "chrom": "6",
+            "n_studies": 2,
+            "aligned_variants": 481887,
+            "meta_variants": 481887,
+            "skipped": false
+          },
+          {
+            "chrom": "7",
+            "n_studies": 2,
+            "aligned_variants": 400990,
+            "meta_variants": 400990,
+            "skipped": false
+          },
+          {
+            "chrom": "8",
+            "n_studies": 2,
+            "aligned_variants": 375342,
+            "meta_variants": 375342,
+            "skipped": false
+          },
+          {
+            "chrom": "9",
+            "n_studies": 2,
+            "aligned_variants": 297737,
+            "meta_variants": 297737,
+            "skipped": false
+          },
+          {
+            "chrom": "10",
+            "n_studies": 2,
+            "aligned_variants": 351497,
+            "meta_variants": 351497,
+            "skipped": false
+          },
+          {
+            "chrom": "11",
+            "n_studies": 2,
+            "aligned_variants": 343193,
+            "meta_variants": 343193,
+            "skipped": false
+          },
+          {
+            "chrom": "12",
+            "n_studies": 2,
+            "aligned_variants": 337877,
+            "meta_variants": 337877,
+            "skipped": false
+          },
+          {
+            "chrom": "13",
+            "n_studies": 2,
+            "aligned_variants": 257588,
+            "meta_variants": 257588,
+            "skipped": false
+          },
+          {
+            "chrom": "14",
+            "n_studies": 2,
+            "aligned_variants": 227182,
+            "meta_variants": 227182,
+            "skipped": false
+          },
+          {
+            "chrom": "15",
+            "n_studies": 2,
+            "aligned_variants": 194459,
+            "meta_variants": 194459,
+            "skipped": false
+          },
+          {
+            "chrom": "16",
+            "n_studies": 2,
+            "aligned_variants": 197077,
+            "meta_variants": 197077,
+            "skipped": false
+          },
+          {
+            "chrom": "17",
+            "n_studies": 2,
+            "aligned_variants": 170216,
+            "meta_variants": 170216,
+            "skipped": false
+          },
+          {
+            "chrom": "18",
+            "n_studies": 2,
+            "aligned_variants": 195520,
+            "meta_variants": 195520,
+            "skipped": false
+          },
+          {
+            "chrom": "19",
+            "n_studies": 2,
+            "aligned_variants": 144122,
+            "meta_variants": 144122,
+            "skipped": false
+          },
+          {
+            "chrom": "20",
+            "n_studies": 2,
+            "aligned_variants": 146011,
+            "meta_variants": 146011,
+            "skipped": false
+          },
+          {
+            "chrom": "21",
+            "n_studies": 2,
+            "aligned_variants": 89846,
+            "meta_variants": 89846,
+            "skipped": false
+          },
+          {
+            "chrom": "22",
+            "n_studies": 2,
+            "aligned_variants": 85808,
+            "meta_variants": 85808,
+            "skipped": false
+          }
+        ]
+      },
+      "compute_seconds": 124.4473
+    },
+    {
+      "ts_utc": "2026-06-07T14:14:53.010203+00:00",
+      "kind": "meta_results_summary",
+      "payload": {
+        "n_total": 6867143,
+        "n_significant": 376,
+        "n_suggestive": 699,
+        "n_heterogeneity_removed": 0
+      }
+    }
+  ]
+}

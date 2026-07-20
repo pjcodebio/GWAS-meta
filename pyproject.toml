@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gwas-meta"
+version = "0.1.0"
+description = "GWAS Meta-Analysis automation tool with human-in-the-loop"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.30",
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "requests>=2.31",
+    "anthropic>=0.40",
+    "openai>=1.10",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "plotly>=5.18",
+    "fpdf2>=2.7",
+    "kaleido>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "responses>=0.25",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

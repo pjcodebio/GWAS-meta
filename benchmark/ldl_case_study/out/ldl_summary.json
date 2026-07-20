@@ -1,0 +1,58 @@
+{
+  "gcst_inputs": [
+    "GCST90019512",
+    "GCST90475420"
+  ],
+  "config_resolved": {
+    "source": "config/settings.yaml (utils.config.load_config)",
+    "valid_hm_codes": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "min_study_count": 2,
+    "significance_threshold": 5e-08
+  },
+  "aligned_variants": 6840875,
+  "meta_rows": 6840875,
+  "gws_variants": 40645,
+  "gws_variants_pre_q": 47402,
+  "suggestive_variants": 73965,
+  "q_filter_threshold": 1e-06,
+  "het_variants_removed": 14728,
+  "direction_concordance_gws": 0.974220497025442,
+  "median_i2_gws_percent": 73.03880140287394,
+  "lambda_gc": {
+    "GCST90019512": 1.357791402583727,
+    "GCST90475420": 1.6256465143017362
+  },
+  "sample_overlap_check": {
+    "n_studies_scanned": 2,
+    "shared_pubmed_ids": [],
+    "shared_cohort_keywords": [],
+    "any_found": false,
+    "interpretation": "No evidence of shared cohorts in metadata. This does not rule out overlap \u2014 independence must be verified from source publications."
+  },
+  "recovery": {
+    "canonical": {
+      "recovered": 15,
+      "expected": 15
+    },
+    "glgc_new": {
+      "recovered": 15,
+      "expected": 15
+    },
+    "total": {
+      "recovered": 30,
+      "expected": 30
+    }
+  },
+  "timings_seconds": {
+    "chunk": 43.57459306716919,
+    "align_meta": 56.4594030380249,
+    "total_wall": 195.19089818000793
+  },
+  "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3"
+}

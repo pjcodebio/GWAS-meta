@@ -1,0 +1,71 @@
+{
+  "table_3_2_2a": {
+    "all_matched": {
+      "label": "all_matched",
+      "n": 7603652,
+      "pearson_r_beta": 0.9999973332561447,
+      "pearson_r_se": 0.9999966221931033,
+      "pearson_r_neglog10p": 0.9999956632258343,
+      "direction_concordance": 0.9996375425913758,
+      "mean_abs_dbeta": 4.260664135370899e-05,
+      "max_abs_dbeta": 0.0017022437841115873
+    },
+    "reference_significant": {
+      "label": "reference_significant",
+      "n": 3185,
+      "pearson_r_beta": 0.999998643096168,
+      "pearson_r_se": 0.9999920327791001,
+      "pearson_r_neglog10p": 0.9999938630587304,
+      "direction_concordance": 1.0,
+      "mean_abs_dbeta": 0.00027646091100904605,
+      "max_abs_dbeta": 0.001048521882383524
+    },
+    "gws_variants": {
+      "engine": 3184,
+      "reference": 3185,
+      "shared": 3182
+    }
+  },
+  "table_3_2_2b": {
+    "raw": {
+      "finngen": 21294541,
+      "ukbb": 23731281,
+      "reference": 32353705
+    },
+    "after_qc": {
+      "finngen": 8685374,
+      "ukbb": 8603008
+    },
+    "aligned_overlap": 7603652
+  },
+  "table_3_2_2_full_accounting": {
+    "reference_only_gap": 24638083,
+    "engine_only": 0,
+    "in_raw_removed_by_qc": 22557005,
+    "single_cohort": 2081078,
+    "in_neither_raw": 0,
+    "in_both_postqc_missed": 0,
+    "categorized_total": 24638083,
+    "reconciles": true,
+    "pct_removed_by_qc": 91.55340941095133,
+    "pct_single_cohort": 8.44659058904867
+  },
+  "sample_overlap_check": {
+    "n_studies_scanned": 2,
+    "shared_pubmed_ids": [],
+    "shared_cohort_keywords": [],
+    "any_found": false,
+    "interpretation": "No evidence of shared cohorts in metadata. This does not rule out overlap \u2014 independence must be verified from source publications."
+  },
+  "timings_seconds": {
+    "chunk": 66.81118702888489,
+    "align_meta": 62.663207054138184,
+    "load_and_join_reference": 98.44219517707825,
+    "total_wall": 237.3448851108551
+  },
+  "memory_gb": {
+    "pipeline_peak": 4.000457763671875,
+    "total_peak": 4.000457763671875,
+    "note": "ru_maxrss (RUSAGE_SELF); pipeline_peak excludes the validation-only reference load"
+  }
+}

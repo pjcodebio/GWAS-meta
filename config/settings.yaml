@@ -1,0 +1,32 @@
+llm:
+  provider: "anthropic"  # "anthropic" or "openai"
+  anthropic:
+    model: "claude-sonnet-4-6"
+    max_tokens: 4096
+  openai:
+    model: "gpt-4o"
+    max_tokens: 4096
+
+gwas_catalog:
+  rest_base_url: "https://www.ebi.ac.uk/gwas/rest/api"
+  ftp_host: "ftp.ebi.ac.uk"
+  ftp_base_path: "/pub/databases/gwas/summary_statistics"
+  request_timeout: 120
+  rate_limit_delay: 0.5
+
+meta_analysis:
+  min_studies: 2
+  significance_threshold: 5.0e-8
+  suggestive_threshold: 1.0e-5
+
+data:
+  # Keep only successfully-harmonised, non-palindromic variants per the
+  # EBI gwas-sumstats-harmoniser spec:
+  #   10 = forward strand, alleles correct   11 = forward strand, flipped
+  #   12 = reverse strand, alleles correct   13 = reverse strand, flipped
+  # Code 10 is the dominant success code (~85% of a typical deposit); it is
+  # NOT palindromic. Palindromic (1-9) and failure (14-18) codes are dropped.
+  # Must match DEFAULT_VALID_HM_CODES in src/gwas_meta/data/harmonize.py.
+  valid_hm_codes: [10, 11, 12, 13]
+  min_study_count: 2
+  cache_dir: ".cache/summary_stats"

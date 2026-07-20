@@ -1,0 +1,64 @@
+{
+  "gcst_inputs": [
+    "GCST90011892",
+    "GCST90011893"
+  ],
+  "config_resolved": {
+    "source": "config/settings.yaml (utils.config.load_config)",
+    "valid_hm_codes": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "min_study_count": 2,
+    "significance_threshold": 5e-08
+  },
+  "aligned_variants": 6867143,
+  "meta_rows": 6867143,
+  "gws_variants": 376,
+  "gws_by_chromosome": [
+    {
+      "chr": "6",
+      "n_gws": 376
+    }
+  ],
+  "gws_off_chr6": 0,
+  "risk_increasing": 347,
+  "protective": 29,
+  "median_i2_gws_percent": 12.859928548458878,
+  "lambda_gc": {
+    "GCST90011892": 1.0550163764581446,
+    "GCST90011893": 1.0344937194730668
+  },
+  "sample_overlap_check": {
+    "n_studies_scanned": 2,
+    "shared_pubmed_ids": [
+      {
+        "pubmed_id": "33514863",
+        "study_ids": [
+          "GCST90011892",
+          "GCST90011893"
+        ]
+      }
+    ],
+    "shared_cohort_keywords": [],
+    "any_found": true,
+    "interpretation": "Evidence of shared cohorts was found; verify from source publications and consider MetaSubtract / bivariate LDSC."
+  },
+  "eys": {
+    "recovered": true,
+    "lead_variant": "chr6:64990459:A:G",
+    "lead_p_fixed": 1.1730392925167945e-13,
+    "lead_beta_fixed": 1.3733277389867566,
+    "lead_or": 3.9484683293319374,
+    "lead_i_squared": 0.0
+  },
+  "timings_seconds": {
+    "chunk": 35.37296271324158,
+    "align_meta": 56.3163001537323,
+    "total_wall": 166.55657482147217
+  },
+  "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3"
+}
