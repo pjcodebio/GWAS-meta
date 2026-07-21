@@ -89,9 +89,13 @@ def run_meta_analysis_batch(
     n_rows = len(adf)
     n_unique = adf["variant_id"].nunique()
 
-    # Check if all variants have the same k (common case: 2 studies)
-    k_uniform = n_rows // n_unique
-    uniform = (n_rows == n_unique * k_uniform)
+    # Check every variant has the same k. Divisibility (n_rows % n_unique == 0)
+    # is NOT sufficient: mixed study counts can coincidentally sum to a multiple
+    # of n_unique, which would make the reshape below misalign rows. Verify the
+    # actual per-variant counts are all equal before taking the fast path.
+    vcounts = adf.groupby("variant_id", sort=False).size().values
+    uniform = bool((vcounts == vcounts[0]).all())
+    k_uniform = int(vcounts[0])
 
     if uniform:
         k_groups = [(
