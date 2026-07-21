@@ -8,7 +8,10 @@ The tool integrates programmatic access to the NHGRI-EBI GWAS
 Catalog, automated data harmonization, per-study QC, and fixed- and
 random-effects meta-analysis in a Streamlit wizard. A two-pass
 disk-based architecture handles genome-scale runs (tens of millions
-of variants across 50+ studies) on ~4 GB RAM.
+of variants) on a commodity 8 GB laptop. Peak memory is bounded by
+the largest single chromosome (about 4 GB in the full-genome
+benchmark), so it scales with the number of studies rather than
+genome size.
 
 ## Reproducing the thesis results
 
@@ -28,7 +31,7 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-Requirements: Python ≥ 3.11, ~4 GB RAM for a full-genome run.
+Requirements: Python ≥ 3.11, 8 GB RAM (peak ~4 GB in the full-genome benchmark).
 
 ## Run
 

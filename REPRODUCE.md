@@ -127,15 +127,15 @@ this repository — their source is the citation in the manuscript.
 
 ## 0. Setup
 
-**Requirements**: Python ≥ 3.11, ~4 GB free RAM for a full-genome
-case study, ~10 GB free disk for cached summary statistics. The Tier-1
+**Requirements**: Python ≥ 3.11, 8 GB RAM (peak ~4 GB in the
+full-genome benchmark), ~10 GB free disk for cached summary statistics. The Tier-1
 metafor check (§2) additionally needs R with the `metafor` package —
 §2 opens with commands to check for it and install it if missing; every
 other step is Python-only.
 
 ```bash
-git clone https://github.com/pjcodebio/GWAMA_tool.git
-cd GWAMA_tool
+git clone https://github.com/pjcodebio/GWAS-meta.git
+cd GWAS-meta
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
@@ -690,7 +690,7 @@ Warnings that may appear at Step 5 and their interpretation:
 ## Reporting problems
 
 If any number in this document does not reproduce, please open an
-issue at https://github.com/pjcodebio/GWAMA_tool/issues with:
+issue at https://github.com/pjcodebio/GWAS-meta/issues with:
 
 - Which section (1–5).
 - The specific number that disagreed and what you got instead.
